@@ -3,35 +3,12 @@
 <head>
   <title>WEB - CSS</title>
   <meta charset="utf-8">
+  <script src="colors.js"></script>
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
   <input type="button" value="dark" onclick="
-  var target = document.querySelector('body');
-  if(this.value === 'dark') {
-    target.style.backgroundColor='black';
-    target.style.color='white';
-    this.value = 'bright';
-
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while (i < alist.length) {
-      alist[i].style.color = 'powderblue';
-      i = i + 1;
-    }
-
-  } else {
-    target.style.backgroundColor='white';
-    target.style.color='black';
-    this.value = 'dark';
-
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while (i < alist.length) {
-      alist[i].style.color = 'blue';
-      i = i + 1;
-    }
-  }
+    darkBrightToggle(this);
   ">
     <ol>
       <li><a href="1.html">HTML</a></li>
